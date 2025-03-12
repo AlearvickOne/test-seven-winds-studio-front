@@ -1,0 +1,79 @@
+@import "src/styles/colors.style";
+
+.layout-menu {
+  display: flex;
+  height: calc(100dvh - 44px);
+  overflow: hidden;
+
+  .layout-menu-row {
+    height: 44px;
+    border-bottom: 1px solid $smoke-medium;
+    width: 100%;
+  }
+
+  .open-elements {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+
+
+    > * {
+      height: 100%;
+      display: flex;
+      padding: 0 15px;
+      border-right: 1px solid $smoke-medium;
+      align-items: center;
+    }
+  }
+
+
+}
+
+.name-project {
+  color: $smoke-light;
+  padding: 8px 20px;
+
+  .name-project-title {
+    font-size: 14px;
+  }
+
+  .name-project-abr {
+    font-size: 10px;
+  }
+}
+
+.dashboard {
+  min-width: 240px;
+
+  color: #FFFFFF;
+  border-right: 1px solid $smoke-medium;
+
+  .dashboard-elements{
+    overflow-y: auto;
+    height: 100%;
+
+    .dashboard-el {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 5px 20px;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        color: $misty-blue;
+      }
+    }
+
+    .dashboard-el-active {
+      background-color: $ghost-white;
+      cursor: default;
+
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+
+}

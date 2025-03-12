@@ -1,0 +1,44 @@
+@import "src/styles/colors.style";
+
+.header_menu {
+  height: 44px;
+  max-width: 100%;
+  padding: 0 24px;
+  border-bottom: 1px solid $smoke-medium;
+  display: flex;
+  align-items: center;
+  gap: 0 31px;
+  font-size: 14px;
+
+  .header_menu-icons {
+    color: $smoke-light;
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+
+    > * {
+      cursor: pointer;
+    }
+  }
+
+  .header_menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 0 28px;
+
+    > * {
+      color:  $smoke-light;
+      cursor: pointer;
+
+      &:hover {
+        color: $misty-blue;
+      }
+    }
+  }
+}
+
+.element_active {
+  color: #FFF !important;
+  border-bottom: 2px #FFF solid;
+  padding: 11px 0;
+}
