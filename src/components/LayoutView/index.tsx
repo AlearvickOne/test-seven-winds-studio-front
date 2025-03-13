@@ -1,1 +1,1 @@
-export * from "./LayoutView";
+export { LayoutView } from "./LayoutView";

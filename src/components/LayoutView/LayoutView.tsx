@@ -1,8 +1,14 @@
 import "./LayoutView.style.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { dashboardElements } from "./LayoutView.constants";
+import { TableWorks } from "../TableWorks";
+import { ReactNode } from "react";
 
-export function LayoutView() {
+interface LayoutViewProps {
+  children?: ReactNode;
+}
+
+export function LayoutView({ children }: LayoutViewProps) {
   return (
     <div className="layout-menu">
       <div className="dashboard">
@@ -24,8 +30,12 @@ export function LayoutView() {
         </div>
       </div>
 
-      <div className="layout-menu-row open-elements">
-        <div>Строительно-монтажные работы</div>
+      <div className="w-full">
+        <div className="layout-menu-row open-elements">
+          <div>Строительно-монтажные работы</div>
+        </div>
+
+        <TableWorks />
       </div>
     </div>
   );
