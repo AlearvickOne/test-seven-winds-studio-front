@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BACKEND_URL = "http://185.244.172.108:8081/v1/outlay-rows/entity";
+const BACKEND_URL = "/api/v1/outlay-rows/entity";
 const ENTITY_ID = 150621;
 
 export async function getRowListFromBackend() {
