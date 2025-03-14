@@ -20,7 +20,7 @@ class TableWorksStore {
     this.treeData = await getRowListFromBackend();
 
     // Если данных нет, добавляем одну новую строку
-    if (this.treeData.length === 0) {
+    if (this.treeData?.length === 0) {
       this.treeData = [this.createNewRow(0)];
     }
   }

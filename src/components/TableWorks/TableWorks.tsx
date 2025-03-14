@@ -23,7 +23,7 @@ export const TableWorks = observer(() => {
           </tr>
         </thead>
         <tbody>
-          {tableWorksStore.treeData.map((row, index) => (
+          {tableWorksStore?.treeData?.map((row, index) => (
             <TableRow
               key={row.id}
               row={row}
