@@ -1,0 +1,14 @@
+@import "src/styles/colors.style";
+
+.table-input {
+  background-color: transparent;
+  border: 1px solid $smoke-medium;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+
+  &::placeholder {
+    color: $smoke-medium;
+  }
+}

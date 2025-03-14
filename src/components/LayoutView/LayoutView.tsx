@@ -2,13 +2,8 @@ import "./LayoutView.style.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { dashboardElements } from "./LayoutView.constants";
 import { TableWorks } from "../TableWorks";
-import { ReactNode } from "react";
 
-interface LayoutViewProps {
-  children?: ReactNode;
-}
-
-export function LayoutView({ children }: LayoutViewProps) {
+export function LayoutView() {
   return (
     <div className="layout-menu">
       <div className="dashboard">

@@ -1,0 +1,43 @@
+@import "src/styles/colors.style";
+
+.td-row {
+  position: relative;
+  width: 30px;
+
+  .div-row {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .vertical-line {
+    position: absolute;
+    left: 3px;
+    top: -40px;
+    width: 1px;
+    background-color: $ghost-white;
+  }
+
+  .horizontal-line {
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    width: 16px;
+    height: 1px;
+    background-color: $ghost-white;
+  }
+
+  .add-row-icon {
+    color: $misty-blue;
+    cursor: pointer;
+  }
+
+  .delete-row-icon {
+    color: $red;
+    cursor: pointer;
+  }
+
+  .disable-icon {
+    color: $smoke-medium;
+  }
+}

@@ -1,57 +1,61 @@
 @import "src/styles/colors.style";
 
-.background-table {
-  background-color: $dark;
+.table-container {
   width: 100%;
   height: 100%;
+  max-height: 90%; // Задай нужную высоту контейнера
+  overflow-y: auto; // Включаем вертикальный скролл
+  background-color: $dark;
 }
 
 .table {
   width: 100%;
-  padding: 10px;
   font-size: 14px;
   text-align: left;
+  border-collapse: collapse; // Убираем двойные границы
 
   thead {
     color: $smoke-light;
-    position: relative;
+    position: sticky; // Фиксируем заголовок при прокрутке
+    top: 0;
+    background-color: $dark; // Фон заголовка
+    z-index: 1; // Чтобы заголовок был поверх контента
 
     th {
       font-weight: 400;
-      padding: 0 12px 12px 12px;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $smoke-medium;
+      padding: 12px;
+      border-bottom: 1px solid $smoke-medium; // Граница под заголовком
     }
   }
 
   tbody {
-    width: 100%;
     color: #FFFFFF;
 
     tr {
-      position: relative;
+      border-bottom: 1px solid $smoke-medium; // Граница между строками
 
-      &::after {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $smoke-medium;
+      td {
+        padding: 16px;
       }
     }
-
-    td {
-      padding: 16px 0;
-    }
   }
+}
+
+.table-icons_mouse-enter {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+  background-color: $smoke-medium;
+  padding: 3px 7px;
+  margin-left: 9px;
+  border-radius: 6px;
+}
+
+.table-icons_mouse-leave {
+  display: flex;
+  align-items: center;
+  padding: 3px 7px;
+  margin-left: 9px;
+  border-radius: 6px;
 }
